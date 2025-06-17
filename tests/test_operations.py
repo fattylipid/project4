@@ -362,3 +362,15 @@ def test_operations_invalid_input_types(calc_method, a, b, expected_exception):
         calc_method(a, b)
 
 
+def test_power_positive():
+
+    # Arrange
+    base = 2.0
+    exponent = 3.0
+    expected_result = 8.0
+
+    # Act
+    result = Operation.power(base, exponent)
+
+    # Assert
+    assert result == expected_result, f"Expected {base} ** {exponent} to be {expected_result}, got {result}"
